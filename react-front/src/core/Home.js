@@ -1,6 +1,7 @@
 import React from "react";
 import Posts from "../post/Posts";
 
+// Home Page 
 const Home = () => (
   <div>
     <div className="jumbotron">

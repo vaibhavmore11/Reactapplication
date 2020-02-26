@@ -20,6 +20,8 @@ class Profile extends Component {
     };
   }
 
+  // to view no of followers on profile page
+
   checkFollow = user => {
     const jwt = isAuthenticated();
     const match = user.followers.find(follower => {
@@ -27,6 +29,8 @@ class Profile extends Component {
     });
     return match;
   };
+
+// click button on profile page
 
   clickFollowButton = callApi => {
     const userId = isAuthenticated().user._id;
@@ -53,6 +57,8 @@ class Profile extends Component {
       }
     });
   };
+
+// load posts of a particular user
 
   loadPosts = userId => {
     const token = isAuthenticated().token;

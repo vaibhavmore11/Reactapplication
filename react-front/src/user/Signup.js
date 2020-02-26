@@ -3,6 +3,8 @@ import { signup } from "../auth";
 import { Link } from "react-router-dom";
 import SocialLogin from "./SocialLogin";
 
+// signup component
+
 class Signup extends Component {
     constructor() {
         super();
@@ -20,6 +22,8 @@ class Signup extends Component {
         this.setState({ error: "" });
         this.setState({ [name]: event.target.value });
     };
+
+    // while sign-up use day as recaptcha
 
     recaptchaHandler = e => {
         this.setState({ error: "" });
@@ -79,6 +83,8 @@ class Signup extends Component {
             });
         }
     };
+
+    //sign up form
 
     signupForm = (name, email, password, recaptcha) => (
         <form>

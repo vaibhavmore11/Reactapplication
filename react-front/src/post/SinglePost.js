@@ -5,6 +5,8 @@ import { Link, Redirect } from 'react-router-dom';
 import { isAuthenticated } from '../auth';
 import Comment from './Comment';
 
+// to view single post and use features
+
 class SinglePost extends Component {
     state = {
         post: '',
@@ -14,6 +16,8 @@ class SinglePost extends Component {
         likes: 0,
         comments: []
     };
+
+// to get log of likes on post
 
     checkLike = likes => {
         const userId = isAuthenticated() && isAuthenticated().user._id;
@@ -36,6 +40,8 @@ class SinglePost extends Component {
             }
         });
     };
+
+    // to update comment on the post
 
     updateComments = comments => {
         this.setState({ comments });
@@ -62,6 +68,8 @@ class SinglePost extends Component {
             }
         });
     };
+
+// to delete post
 
     deletePost = () => {
         const postId = this.props.match.params.postId;

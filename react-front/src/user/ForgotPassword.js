@@ -8,6 +8,8 @@ class ForgotPassword extends Component {
         error: ""
     };
 
+  // to get new password 
+    
     forgotPassword = e => {
         e.preventDefault();
         this.setState({ message: "", error: "" });

@@ -10,6 +10,7 @@ class ResetPassword extends Component {
             error: ""
         };
     }
+// to reset password
 
     resetPassword = e => {
         e.preventDefault();

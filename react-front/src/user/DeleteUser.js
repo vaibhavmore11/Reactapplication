@@ -4,6 +4,8 @@ import { isAuthenticated } from "../auth";
 import { remove } from "./apiUser";
 import { signout } from "../auth";
 
+// to delete a user 
+
 class DeleteUser extends Component {
     state = {
         redirect: false

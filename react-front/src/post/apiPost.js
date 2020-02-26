@@ -13,6 +13,8 @@ export const create = (userId, token, post) => {
         .catch(err => console.log(err));
 };
 
+// included pagination
+
 export const list = page => {
     return fetch(`${process.env.REACT_APP_API_URL}/posts/?page=${page}`, {
         method: "GET"
@@ -23,6 +25,8 @@ export const list = page => {
         .catch(err => console.log(err));
 };
 
+// to get single post of user
+
 export const singlePost = postId => {
     return fetch(`${process.env.REACT_APP_API_URL}/post/${postId}`, {
         method: "GET"
@@ -32,6 +36,8 @@ export const singlePost = postId => {
         })
         .catch(err => console.log(err));
 };
+
+// to get list of user for post
 
 export const listByUser = (userId, token) => {
     return fetch(`${process.env.REACT_APP_API_URL}/posts/by/${userId}`, {
@@ -48,6 +54,8 @@ export const listByUser = (userId, token) => {
         .catch(err => console.log(err));
 };
 
+// to delete post
+
 export const remove = (postId, token) => {
     return fetch(`${process.env.REACT_APP_API_URL}/post/${postId}`, {
         method: "DELETE",
@@ -62,6 +70,8 @@ export const remove = (postId, token) => {
         })
         .catch(err => console.log(err));
 };
+
+// to update post
 
 export const update = (postId, token, post) => {
     console.log(postId, token, post);
@@ -79,6 +89,8 @@ export const update = (postId, token, post) => {
         .catch(err => console.log(err));
 };
 
+// to like a post
+
 export const like = (userId, token, postId) => {
     return fetch(`${process.env.REACT_APP_API_URL}/post/like`, {
         method: "PUT",
@@ -94,6 +106,8 @@ export const like = (userId, token, postId) => {
         })
         .catch(err => console.log(err));
 };
+
+// to unlike a post
 
 export const unlike = (userId, token, postId) => {
     return fetch(`${process.env.REACT_APP_API_URL}/post/unlike`, {
@@ -111,6 +125,8 @@ export const unlike = (userId, token, postId) => {
         .catch(err => console.log(err));
 };
 
+// to add comments on post
+
 export const comment = (userId, token, postId, comment) => {
     return fetch(`${process.env.REACT_APP_API_URL}/post/comment`, {
         method: "PUT",
@@ -126,6 +142,8 @@ export const comment = (userId, token, postId, comment) => {
         })
         .catch(err => console.log(err));
 };
+
+// to remove a comment from post
 
 export const uncomment = (userId, token, postId, comment) => {
     return fetch(`${process.env.REACT_APP_API_URL}/post/uncomment`, {

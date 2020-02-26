@@ -3,6 +3,8 @@ import { Redirect } from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 import { socialLogin, authenticate } from '../auth';
 
+// to signup using google client
+
 class SocialLogin extends Component {
     constructor() {
         super();

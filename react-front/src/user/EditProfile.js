@@ -4,6 +4,8 @@ import { read, update, updateUser } from "./apiUser";
 import { Redirect } from "react-router-dom";
 import DefaultProfile from "../images/user.png";
 
+// to edit profile
+
 class EditProfile extends Component {
   constructor() {
     super();
@@ -43,6 +45,8 @@ class EditProfile extends Component {
     this.init(userId);
   }
 
+  // validate user
+
   isValid = () => {
     const { name, email, password, fileSize } = this.state;
     if (fileSize > 1000000) {
@@ -52,6 +56,7 @@ class EditProfile extends Component {
       });
       return false;
     }
+    // validate name
     if (name.length === 0) {
       this.setState({ error: "Please enter Name", loading: false });
       return false;
@@ -64,6 +69,7 @@ class EditProfile extends Component {
       });
       return false;
     }
+    // validate password
     if (password.length >= 1 && password.length <= 5) {
       this.setState({
         error: "Password must be at least 6 characters long",
@@ -108,6 +114,7 @@ class EditProfile extends Component {
       });
     }
   };
+
 
   signupForm = (name, email, password, about) => (
     <form>

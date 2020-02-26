@@ -3,6 +3,8 @@ import { Link, Redirect } from "react-router-dom";
 import { signin, authenticate } from "../auth";
 import SocialLogin from "./SocialLogin";
 
+//sign-in components
+
 class Signin extends Component {
     constructor() {
         super();
@@ -20,6 +22,8 @@ class Signin extends Component {
         this.setState({ error: "" });
         this.setState({ [name]: event.target.value });
     };
+
+//  while login we can use Day as recaptcha
 
     recaptchaHandler = e => {
         this.setState({ error: "" });
@@ -61,7 +65,7 @@ class Signin extends Component {
             email,
             password
         };
-        // console.log(user);
+
         if (this.state.recaptcha) {
             signin(user).then(data => {
                 if (data.error) {
@@ -80,6 +84,8 @@ class Signin extends Component {
             });
         }
     };
+
+    //sign-in form
 
     signinForm = (email, password, recaptcha) => (
         <form>

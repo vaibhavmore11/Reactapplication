@@ -3,6 +3,8 @@ import { list } from "./apiPost";
 import DefaultPost from "../images/blog.png";
 import { Link } from "react-router-dom";
 
+//to view all posts
+
 class Posts extends Component {
     constructor() {
         super();
@@ -11,6 +13,8 @@ class Posts extends Component {
             page: 1
         };
     }
+
+    // to load posts 
 
     loadPosts = page => {
         list(page).then(data => {
@@ -26,10 +30,14 @@ class Posts extends Component {
         this.loadPosts(this.state.page);
     }
 
+    // to load posts with respect to page (more)
+
     loadMore = number => {
         this.setState({ page: this.state.page + number });
         this.loadPosts(this.state.page + number);
     };
+
+    // to load posts with respect to page (less)
 
     loadLess = number => {
         this.setState({ page: this.state.page - number });

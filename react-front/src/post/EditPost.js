@@ -4,6 +4,8 @@ import { isAuthenticated } from "../auth";
 import { Redirect } from "react-router-dom";
 import DefaultPost from "../images/blog.png";
 
+//to edit post
+
 class EditPost extends Component {
     constructor() {
         super();
@@ -38,6 +40,8 @@ class EditPost extends Component {
         const postId = this.props.match.params.postId;
         this.init(postId);
     }
+
+    //validate edited post
 
     isValid = () => {
         const { title, body, fileSize } = this.state;

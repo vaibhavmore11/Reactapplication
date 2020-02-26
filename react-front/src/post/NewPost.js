@@ -3,6 +3,8 @@ import { isAuthenticated } from "../auth";
 import { create } from "./apiPost";
 import { Redirect } from "react-router-dom";
 
+// to add new post
+
 class NewPost extends Component {
     constructor() {
         super();
@@ -23,6 +25,8 @@ class NewPost extends Component {
         this.setState({ user: isAuthenticated().user });
     }
 
+// validate new added post    
+
     isValid = () => {
         const { title, body, fileSize } = this.state;
         if (fileSize > 100000) {
@@ -38,6 +42,8 @@ class NewPost extends Component {
         }
         return true;
     };
+
+    //event handler
 
     handleChange = name => event => {
         this.setState({ error: "" });
@@ -70,6 +76,8 @@ class NewPost extends Component {
             });
         }
     };
+
+    // new post form
 
     newPostForm = (title, body) => (
         <form>

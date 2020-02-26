@@ -15,6 +15,7 @@ class Comment extends Component {
         this.setState({ text: event.target.value });
     };
 
+    //to validate comment
     isValid = () => {
         const { text } = this.state;
         if (!text.length > 0 || text.length > 150) {
@@ -26,7 +27,7 @@ class Comment extends Component {
         }
         return true;
     };
-
+    // to add comment
     addComment = e => {
         e.preventDefault();
 
@@ -52,7 +53,7 @@ class Comment extends Component {
             );
         }
     };
-
+    //delete comment
     deleteComment = comment => {
         const userId = isAuthenticated().user._id;
         const token = isAuthenticated().token;

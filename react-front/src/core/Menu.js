@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { signout, isAuthenticated } from '../auth';
-
+//Navigation bar Components: Home, Users, Create Post,Sign in, Signup, Admin, Find People, Sign out 
 const isActive = (history, path) => {
     if (history.location.pathname === path) return { color: '#ff9900' };
     else return { color: '#ffffff' };
@@ -12,7 +12,7 @@ const Menu = ({ history }) => (
         <ul className="nav nav-tabs bg-primary">
             <li className="nav-item">
                 <Link className="nav-link" style={isActive(history, '/')} to="/">
-                    Home
+                    Home 
                 </Link>
             </li>
 

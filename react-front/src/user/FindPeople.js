@@ -4,6 +4,8 @@ import DefaultProfile from "../images/user.png";
 import { Link } from "react-router-dom";
 import { isAuthenticated } from "../auth";
 
+// find people page
+
 class FindPeople extends Component {
     constructor() {
         super();
@@ -26,6 +28,8 @@ class FindPeople extends Component {
             }
         });
     }
+
+// to follow a particular user
 
     clickFollow = (user, i) => {
         const userId = isAuthenticated().user._id;
