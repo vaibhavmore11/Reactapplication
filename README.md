@@ -1,4 +1,4 @@
-### Before running this front-end application, Please start the nodeapi application and please refer the .env file for the database values
+### Before running this front-end application, Please start the nodeapi application and please refer the .env file in the react-front folder for the database values
 
 ### To run this project, do the following:
 
